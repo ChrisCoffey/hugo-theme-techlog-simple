@@ -4,21 +4,8 @@
   {{ .Summary }}
   {{ end }}
   <hr />
-  <h4>TableOfContents</h4>
+  <h4><a href="/">TableOfContents</a></h4>
   {{ .TableOfContents }}
-  <hr />
-  <h4><a href="{{ "/categories/" | relLangURL }}">Categories</a></h4>
-  {{ with .Params.Categories }}
-  <div>
-    <ul>
-      {{ range . }}
-      <li>
-        <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
   <hr />
   <h4><a href="{{ "/tags/" | relLangURL }}">Tags</a></h4>
   {{ with .Params.Tags }}
